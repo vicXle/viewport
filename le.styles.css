@@ -1,8 +1,54 @@
-/* YOUR NAME GOES HERE */
+/* Victoria Le */
 
 /* --------------- ADD CSS RESET TO THE FILE HERE --------------- */
 
-
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* ----- AUTOPREFIXER FOR VS CODE WAS USED FOR VENDOR PREFIXES ----- */
 /* ---------- VARIABLES ---------- */
@@ -30,10 +76,13 @@
 
 
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
-/* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
-
-/* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
-
+@media (prefers-color-scheme: dark) {
+    /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
+    body {
+        /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
+        background-color: var(--dark-gray);
+    }
+}
 /* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
 
 
@@ -150,7 +199,8 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and (max-width: 414px){
+    header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -175,12 +225,14 @@ img{
     img{
         width: 200px;
         max-width: 200px;
-    } */
+    }
+}
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
+@media screen and (max-width: 768px){
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
     /* header, footer{
         background-color: var(--black);
@@ -208,6 +260,7 @@ img{
         grid-column: 3/4;
         grid-row: 3/5;
     } */
+}
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
 
