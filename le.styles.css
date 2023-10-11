@@ -128,23 +128,25 @@ footer .icon{
 
 @-webkit-keyframes icon-animation {
     0% { font-variation-settings: "TIME" 1; }
-  100% { font-variation-settings: "TIME" 100; }
+    100% { font-variation-settings: "TIME" 100; }
 }
 
 @keyframes icon-animation {
     0% { font-variation-settings: "TIME" 1; }
-  100% { font-variation-settings: "TIME" 100; }
+    100% { font-variation-settings: "TIME" 100; }
 }
 
 
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
-    @-webkit-keyframes icon-animation {
-        0% { font-variation-settings: "TIME" 1; }
-    }
-    @keyframes icon-animation {
-        0% { font-variation-settings: "TIME" 1; }
+    @media (prefers-reduced-motion){
+        @-webkit-keyframes icon-animation {
+            0% { font-variation-settings: "TIME" 1; }
+        }
+        @keyframes icon-animation {
+            0% { font-variation-settings: "TIME" 1; }
+        }
     }
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
 
@@ -199,7 +201,7 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-@media screen and (min-width: 200px) and (max-width: 414px){
+@media screen and (min-width: 200px) and (max-width: 620px){
     header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
@@ -232,7 +234,7 @@ img{
 
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
-@media screen and (min-width: 414px) and (max-width: 768px){
+@media screen and (min-width: 620px) and (max-width: 1380px){
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
     header, footer{
         background-color: var(--black);
@@ -266,7 +268,7 @@ img{
 
 
 /* ---------- LARGE SCREEN STYLES ---------- */
-@media screen and (min-width: 768px) and (max-width: 1080px){
+@media screen and (min-width: 1380px) and (max-width: 1430px){
 /* --------------- BEGIN LARGE SCREEN SIZES --------------- */
     header, footer{
         background-color: var(--lime-green);
@@ -307,23 +309,18 @@ img{
 
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-/* 
+@media screen and (min-width:1380px){
     img{
         width: 300px;
         max-width: 300px;
     }
-*/
-img {
-    width: 100%;
-    max-width: 300px;
 }
-    
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 
 
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1430px) {
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
     header, footer{
         background-color: var(--orange);
